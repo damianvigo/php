@@ -15,11 +15,11 @@
 <body>
     <div class="wrap">
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);  ?>" method="post">
-            <input type="text" class="form-control" name="nombre" placeholder="Nombre:" id="nombre" value="">
+            <input type="text" class="form-control" name="nombre" placeholder="Nombre:" id="nombre" value="<?php if (!$enviado && isset($nombre)) echo $nombre ?>">
 
-            <input type="text" id="correo" class="form-control" name="correo" placeholder="Correo:" value="">
+            <input type="text" id="correo" class="form-control" name="correo" placeholder="Correo:" value="<?php if (!$enviado && isset($correo)) echo $correo ?>">
 
-            <textarea id="mensaje" name="mensaje" class="form-control" placeholder="Mensaje:"></textarea>
+            <textarea id="mensaje" name="mensaje" class="form-control" placeholder="Mensaje:"> <?php if (!$enviado && isset($mensaje)) echo $mensaje ?></textarea>
 
             <!--    <div class="alert error">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.

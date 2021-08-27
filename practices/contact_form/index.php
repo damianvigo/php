@@ -24,6 +24,25 @@ if (isset($_POST['submit'])) {
     } else {
         $errores .= 'Por favor ingresa un correo <br />';
     }
+
+    if (!empty($mensaje)) {
+        $mensaje = htmlspecialchars($mensaje);
+        $mensaje = trim($mensaje);
+        $mensaje = stripslashes($mensaje);
+    } else {
+        $errores .= 'Por favor ingresa el mensaje <br />';
+    }
+
+    if (!$errores) {
+        $enviar_a = 'damiandanielvigo@gmail.com';
+        $asunto = 'Correo enviado desde miPagina.com';
+        $mensaje_preparado = "De: $nombre \n";
+        $mensaje_preparado .= "Correo: $correo \n";
+        $mensaje_preparado .= "Mensaje: " . $mensaje;
+
+        // mail($enviar_a, $asunto, $mensaje_preparado);
+        $enviado = true;
+    }
 }
 
 require 'index.view.php';
