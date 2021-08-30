@@ -1,7 +1,8 @@
 <?php
 
 declare(strict_types=1);
-function cuadrado(int $numero) {
+function cuadrado(int $numero)
+{
     return $numero * $numero;
 }
 
