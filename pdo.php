@@ -20,6 +20,7 @@ try {
 
 
     $statement = $conexion->prepare('SELECT * FROM usuarios WHERE id = :id or :id2');
+
     $statement->execute(array(':id' => $id, ':id2' => 2));
 
     $resultados = $statement->fetchAll();
