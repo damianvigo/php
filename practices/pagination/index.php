@@ -29,6 +29,6 @@ $totalArticulos = $totalArticulos->fetch()['total'];
 // echo "total: $totalArticulos";
 $numeroPaginas = ceil($totalArticulos / $postPorPagina); // 20 / 5 = 4pag
 
-echo $numeroPaginas;
+// echo $numeroPaginas;
 
 require 'index.view.php';
