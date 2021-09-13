@@ -23,14 +23,18 @@
     <div class="contenedor">
         <form class="formulario" method="post" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
 
-            <label for="foto">Selecionar tu foto</label>
+            <label for="foto">Seleccionar tu foto</label>
             <input type="file" id="foto" name="foto">
 
             <label for="titulo">Titulo de la foto</label>
             <input type="text" id="titulo" name="titulo">
 
             <label for="texto">Descripcion</label>
-            <textarea name="name" id="texto" placeholder="Ingresa una descripcion"></textarea>
+            <textarea name="texto" id="texto" placeholder="Ingresa una descripcion"></textarea>
+
+            <?php if (isset($error)) : ?>
+                <p class='error'><?php echo $error; ?></p>
+            <?php endif ?>
 
             <input type="submit" class="submit" value="Subir Foto">
         </form>
