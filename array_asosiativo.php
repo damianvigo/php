@@ -2,7 +2,7 @@
 
 $alex = array('telefono' => '1234567', 'edad' => 25, 'apellido' => 'querty', 'pais' => 'Argentina');
 
-/* $_FILES = array('foto' => array('name'=> '1.jpg', 'type' => 'image/jpeg', 'tmp_name' => 'C:/xampp/tmp/php831.tmp'));
+/* $_FILES = array('foto' => array('name'=> '1.jpg', 'type' => 'image/jpeg', 'tmp_name' => 'C:/xampp/tmp/php831.tmp')); 
 
 $_FILES['foto']['tmp_name']; */
 
