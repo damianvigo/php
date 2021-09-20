@@ -3,14 +3,12 @@
 <div class="contenedor">
     <div class="post">
         <article>
-            <h2 class="titulo">Titulo del articulo</h2>
-            <p class="fecha">1 de Enero de 2022</p>
+            <h2 class="titulo"><?php echo $post['titulo']; ?></h2>
+            <p class="fecha"><?php echo fecha($post['fecha']); ?></p>
             <div class="thumb">
-                <a href="">
-                    <img src="<?php echo RUTA; ?>/img/1.png" alt="">
-                </a>
+                <img src="<?php echo RUTA; ?>/img/<?php echo $post['thumb']; ?>" alt="<?php echo $post['titulo']; ?>">
             </div>
-            <p class="extracto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium aut nemo saepe laborum officia alias libero fugiat praesentium ut mollitia voluptatibus, at blanditiis vitae, dolores ullam soluta quae delectus optio! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus cumque autem eos unde facilis aperiam error. Et, ratione ad mollitia voluptate quibusdam sint illum dicta quae. Unde minus accusantium quibusdam!</p>
+            <p class="extracto"><?php echo $post['texto']; ?></p>
         </article>
     </div>
 </div>
