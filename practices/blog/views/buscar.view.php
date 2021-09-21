@@ -19,7 +19,6 @@
 
     <?php endforeach; ?>
 
-
-
+    <?php require 'paginacion.php'; ?>
 
     <?php require 'footer.php'; ?>
